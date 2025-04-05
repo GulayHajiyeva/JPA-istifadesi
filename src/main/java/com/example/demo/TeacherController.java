@@ -20,8 +20,14 @@ public class TeacherController {
     }
 
 
-    @GetMapping
-    public List<Teacher> getList() {
-        return repo.findAll();
+//    @GetMapping
+//    public List<Teacher> getList() {
+//        return repo.findAll();
+//    }
+
+
+    @GetMapping("/subject/Java")
+    public List<Teacher> getTeachersBySubject() {
+        return repo.aa("Java");
     }
 }
